@@ -3,26 +3,27 @@ name: Deploy Static HTML to GitHub Pages
 on:
   push:
     branches:
-      - main  # Setiap kali push ke main, workflow jalan
+      - main
 
 permissions:
-  contents: write  # Diperlukan agar bisa push ke gh-pages
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # Kalau HTML-nya di root folder
+          path: . # direktori utama, bisa diubah kalau HTML kamu di subfolder
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
