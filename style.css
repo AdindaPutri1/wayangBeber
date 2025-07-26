@@ -133,6 +133,111 @@ nav {
     box-shadow: 0 5px 15px rgba(218, 165, 32, 0.4);
 }
 
+/* Social Media Links Styling */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #f7f2f2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-btn:hover::before {
+    opacity: 1;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-btn:hover img {
+    transform: scale(1.1);
+}
+
+.social-btn span {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Platform specific colors */
+.social-btn.tiktok:hover {
+    border-color: #ff0050;
+    background: linear-gradient(135deg, #ff0050, #000);
+    color: white;
+}
+
+.social-btn.instagram:hover {
+    border-color: #E4405F;
+    background: linear-gradient(135deg, #833AB4, #E4405F, #FCAF45);
+    color: white;
+}
+
+.social-btn.youtube:hover {
+    border-color: #FF0000;
+    background: linear-gradient(135deg, #FF0000, #CC0000);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 15px;
+    }
+    
+    .social-btn {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .social-btn img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .social-btn span {
+        font-size: 12px;
+    }
+}
+
 /* Sections */
 .section {
     padding: 5rem 0;
