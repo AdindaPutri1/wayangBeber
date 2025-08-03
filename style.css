@@ -309,6 +309,27 @@ nav {
     max-width: 800px;
     margin: 0 auto;
 }
+ .reference-item {
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            text-indent: -2rem;
+            margin-left: 2rem;
+            line-height: 1.6;
+        }
+        
+        .reference-item strong {
+            color: #654321;
+        }
+        
+        .reference-item em {
+            color: #8B4513;
+        }
+        
+        .back-to-top {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
 
 /* Galeri */
 .galeri-grid {
