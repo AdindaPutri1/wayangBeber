@@ -434,11 +434,11 @@ nav {
 
         /* Gambar untuk setiap item galeri */
         .galeri-item:nth-child(1) .galeri-image {
-            background-image: url('images/gb1.jpeg')
+            background-image: url('images/gb3.jpeg')
         }
 
         .galeri-item:nth-child(2) .galeri-image {
-            background-image: url('images/gb3.jpeg')
+            background-image: url('images/pertunjukanWayang.jpeg')
         }
 
         .galeri-item:nth-child(3) .galeri-image {
